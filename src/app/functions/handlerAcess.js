@@ -13,4 +13,3 @@ const handlerAcessUser = async (user) => {
     }
 }
 export default handlerAcessUser;
-
