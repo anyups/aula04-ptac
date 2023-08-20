@@ -14,11 +14,6 @@ export const middleware = (request) => {
         }
     }
 
-    if (isTokenValidated || token) {
-        if (request.nextUrl.pathname === '/') {
-            return NextResponse.redirect('/pages/dashboard');
-        }
-    }
     NextResponse.next();
 };
 export const config = {
