@@ -5,7 +5,7 @@ const getLista = [
         name: 'any',
         email: 'any@gmail.com',
         password: '123987',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q54b'
+        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682qasd'
     },
     {
         name: 'iza',
@@ -23,15 +23,15 @@ const getLista = [
         name: 'mendes',
         email: 'mendes@gmail.com',
         password: '564812',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q54b'
+        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q651'
     }
 ]
 
 const getUserAuthenticated = (user) => {
     let userAuth = {};
     getLista.map((usuario) => {
-        if (usuario.email === user.email && usuario.senha === user.password) {
-            userAuth = userzinho
+        if (usuario.email === user.email && usuario.password === user.password) {
+            userAuth = usuario
         } 
     })
     return userAuth;

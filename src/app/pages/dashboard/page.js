@@ -4,7 +4,9 @@ export default async function Dashboard() {
     let pessoas = getUsers();
     return (
         <div>
-            {pessoas.map(user => (<h1>{user.name}</h1>))}
+            <Suspense fallback={<p>carregando...</p>}>
+                <ListUsers users={users}/>
+            </Suspense>
         </div>
     );
 };
