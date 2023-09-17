@@ -1,43 +1,54 @@
 'use server'
 
-const getLista = [
+const usuario = [
     {
-        name: 'any',
-        email: 'any@gmail.com',
-        password: '123987',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682qasd'
+        name: "any",
+        email: "any@gmail.com",
+        password: "123",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    },
+
+    {
+        name: "iza",
+        email: "izabella@gmail.com",
+        password: "456",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     },
     {
-        name: 'iza',
-        email: 'izabella@gmail.com',
-        password: '789362',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q54b'
+        name: "gabriel",
+        email: "gabriel@gmail.com",
+        password: "798",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     },
     {
-        name: 'gabriel',
-        email: 'gabriel@gmail.com',
-        password: '768970',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q54b/'
+        name: "mendes",
+        email: "mendes@gmail.com",
+        password: "1011",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     },
     {
-        name: 'mendes',
-        email: 'mendes@gmail.com',
-        password: '564812',
-        token: 'fhwoui324thb6ewr5ynh47ef3bv52wq4136r136qefr4v682q651'
+        name: "kari",
+        email: "kari@gmail.com",
+        password: "1213",
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     }
 ]
 
-const getUserAuthenticated = (user) => {
-    let userAuth = {};
-    getLista.map((usuario) => {
-        if (usuario.email === user.email && usuario.password === user.password) {
-            userAuth = usuario
-        } 
-    })
-    return userAuth;
-}
+const getUserAuthenticated = (login) => {
+    let user = [];
 
-const getUsers = (user) =>{
-    return getLista
+    usuario.map((usuario) =>{
+    
+    if(usuario.email === login.email && usuario.password === login.password){
+        user = usuario
+    }
+    })
+
+    return user
+   }
+
+const getUsers = () =>{
+    return usuario
+        
 }
 export { getUsers, getUserAuthenticated };
