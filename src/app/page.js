@@ -40,7 +40,7 @@ export default function Login() {
 					<input type="password" className={styles.input} placeholder="Password" onChange={(e) => { setUser({ ...user, password: e.target.value }) }}/>
 				</div>
 				<button className={styles.botao}>
-					<span className={styles.botaotxt}>Log In</span>
+					<span>Log In</span>
 				</button>				
 			</form>
       <ToastContainer/>
